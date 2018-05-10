@@ -8,30 +8,15 @@ dark red rgb(75,12,11);
 yellow-grey rgb(170,169,129);
 light grey rgb(246,246,240);
 */
-
-.App {
-  text-align: center;
-  align-content: center;
+html {
   background-color: rgb(255,254,200);
-  height: 100vh;
-  width: 100%;
-  min-height: 100%;
-  display: grid;
-  grid-template-rows: 1fr auto;
-  /* max-width: 950px; */
+
 }
 
-/* div.main-content {
-  max-width: 950px;
-} */
-
-h1.header {
-  margin-top: 0px;
-  margin-bottom: 0px;
-  font-weight: 200;
-  font-size: 14vw;
-  font-family: 'Fira Sans', sans-serif;
+p {
   color: rgb(96,144,114);
+  font-family: 'Fira Sans', sans-serif;
+  font-weight: 400;
 }
 
 h2 {
@@ -39,12 +24,47 @@ h2 {
   margin-bottom: 0px;    
 }
 
+.App {
+  align-content: center;
+  background-color: rgb(255,254,200);
+  display: grid;
+  grid-template-rows: 1fr auto;
+  height: 100vh;
+  min-height: 100%;
+  text-align: center;
+  width: 100%;
+  /* max-width: 950px; */
+}
+
+.main-content {
+  text-align: center;
+  /* justify-content: center; */
+  /* max-width: 80%; */
+}
+
+.main-content > p {
+  display: inline-block;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 4vh;
+  font-weight: 400;
+  max-width: 80%;
+}
+
+p.header {
+  color: rgb(96,144,114);
+  font-weight: 200;
+  font-size: 14vw;
+  font-family: 'Fira Sans', sans-serif;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
 .content-header span {
+  color: rgb(96,144,114);
+  cursor: pointer;
   font-weight: 200;
   font-size: 9.8vw;
   font-family: 'Fira Sans', sans-serif;
-  color: rgb(96,144,114);
-  cursor: pointer;
   margin-top: 0px; 
 }
 
@@ -56,38 +76,31 @@ h2 {
   margin-top: 0px;
 }
 
-p {
-  color: rgb(115,108,23);
-  font-family: 'Fira Sans', sans-serif;
-  font-weight: 400;
-}
-
 .contact-logos-container {
+  background-color: rgb(255,254,200);
   display: flex;
-  width: 60%;
+  grid-row-start: 2;
+  grid-row-end: 3;
   margin: auto;
   margin-bottom: 5px;
+  width: 60%;
 }
 
 .contact-logos-container > div {
+  align-items: center;
   display: flex;
   justify-content: center;
-  align-items: center;
   width: 40%;
 }
 
 .contact-logos-container svg {
   fill: rgb(96,144,114);
-  transition: fill .8s ease;
-  width: 8vw;
   height: auto;
+  transition: fill .8s ease;
+  max-width: 50px;
+  width: 8vw;
 }
 
 .contact-logos-container svg:hover {
   fill: rgb(75,12,11);
-}
-
-.footer {
-  grid-row-start: 2;
-  grid-row-end: 3;
 }

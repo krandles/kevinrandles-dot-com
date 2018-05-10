@@ -34,13 +34,12 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <div className="main-content">
+        <div>
           <PageHeader />
           <ContentHeader activeContent={this.state.mainContent} setContent={this.setContent} />
           {this.switchContent()}
-          <p>Not much to see here yet...</p>
         </div>
-        <ContactIcons className="footer" />
+        <ContactIcons />
       </div>
     );
   }
