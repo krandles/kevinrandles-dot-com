@@ -7,14 +7,20 @@ red rgb(188,75,45);
 dark red rgb(75,12,11);
 yellow-grey rgb(170,169,129);
 light grey rgb(246,246,240);
+
+light yellow #f7f5a6
+green #4066b5
+medium yellow #c6b968
+dark yellow #b29638
+red-orange #b15829
 */
 html {
   background-color: rgb(255,254,200);
-
 }
 
 p {
   color: rgb(96,144,114);
+  /* color: #4066b5; */
   font-family: 'Fira Sans', sans-serif;
   font-weight: 400;
 }
@@ -29,7 +35,7 @@ h2 {
   background-color: rgb(255,254,200);
   display: grid;
   grid-template-rows: 1fr auto;
-  height: 100vh;
+  /* height: 100vh; */
   min-height: 100%;
   text-align: center;
   width: 100%;
@@ -55,7 +61,7 @@ p.header {
   font-weight: 200;
   font-size: 14vw;
   font-family: 'Fira Sans', sans-serif;
-  margin-top: 0px;
+  margin-top: 5px;
   margin-bottom: 0px;
 }
 
@@ -70,6 +76,7 @@ p.header {
 
 .content-header span.active {
   color: rgb(75,12,11);
+  /* color: #b15829; */
 }
 
 .content-header span > h2 {
@@ -82,7 +89,7 @@ p.header {
   grid-row-start: 2;
   grid-row-end: 3;
   margin: auto;
-  margin-bottom: 5px;
+  margin-bottom: 0px;
   width: 60%;
 }
 
@@ -103,4 +110,12 @@ p.header {
 
 .contact-logos-container svg:hover {
   fill: rgb(75,12,11);
+}
+
+div.react-pdf__Page__annotations.annotationLayer {
+  display: none;
+}
+
+canvas.react-pdf__Page__canvas {
+  display: inline !important;
 }
