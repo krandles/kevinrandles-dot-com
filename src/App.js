@@ -9,7 +9,8 @@ import './App.css';
 
 class App extends Component {
   state = {
-    mainContent: 'about'
+    mainContent: 'about',
+    selectedProject: 'tapped'
   }
 
   setContent = (content) => {
@@ -18,12 +19,18 @@ class App extends Component {
     });
   }
 
+  setProject = (project) => {
+    this.setState({
+      selectedProject: project
+    });
+  }
+
   switchContent = () => {
     switch (this.state.mainContent) {
       case 'about':
         return <ContentAbout />;
       case 'projects':
-        return <ContentProjects />;
+        return <ContentProjects setProject={this.setProject} selectedProject={this.state.selectedProject} />;
       case 'cv':
         return <ContentCV />;
       default:

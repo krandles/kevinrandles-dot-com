@@ -16,6 +16,8 @@ red-orange #b15829
 */
 html {
   background-color: rgb(255,254,200);
+  width: 100%;
+  min-height: 100%;
 }
 
 p {
@@ -35,7 +37,6 @@ h2 {
   background-color: rgb(255,254,200);
   display: grid;
   grid-template-rows: 1fr auto;
-  /* height: 100vh; */
   min-height: 100vh;
   text-align: center;
   width: 100%;
@@ -71,9 +72,9 @@ p.header {
   color: rgb(96,144,114);
   font-weight: 200;
   font-size: 14vw;
-  line-height: 100%;
+  line-height: 85%;
   font-family: 'Fira Sans', sans-serif;
-  margin-top: 5px;
+  margin-top: 0px;
   margin-bottom: 0px;
 }
 
@@ -87,7 +88,7 @@ p.header {
   background-color: rgb(255,254,200);
   font-weight: 200;
   font-size: 9.8vw;
-  line-height: 100%;
+  line-height: 85%;
   font-family: 'Fira Sans', sans-serif;
   border: none;
   padding: 0;
@@ -110,9 +111,10 @@ button:active:focus {
   display: flex;
   grid-row-start: 2;
   grid-row-end: 3;
-  margin: 0 auto;
-  margin-bottom: 5px;
+  margin: 5px auto;
+  padding-top: 20px;
   width: 60%;
+  /* height: 5vh; */
 }
 
 .contact-logos-container > div {
@@ -126,7 +128,6 @@ button:active:focus {
   fill: rgb(96,144,114);
   height: auto;
   transition: fill .8s ease;
-  /* transition: transform .8s ease; */
   max-width: 50px;
   width: 8vw;
 }
@@ -136,35 +137,57 @@ button:active:focus {
   /* transform: scale(1.1); */
 }
 
-.github-icon {
-  animation: 1s ease-out 0s 1 slideInFromBottom;
+.github-appear {
+  transform: scale(0);
 }
 
-.gmail-icon {
-  animation: 1s ease-out 0.2s 1 slideInFromBottom;
+.github-appear.github-appear-active {
+  transform: scale(1);
+  transition: transform 1s ease-out;
+  transition-delay: 400ms;
 }
 
-.linkedin-icon {
-  animation: 1s ease-out 0.4s 1 slideInFromBottom;
+.gmail-appear {
+  transform: scale(0);
 }
 
-.medium-icon {
-  animation: 1s ease-out 0.6s 1 slideInFromBottom;
+.gmail-appear.gmail-appear-active {
+  transform: scale(1);
+  transition: transform 1s ease-out;
+  transition-delay: 200ms;
 }
 
-.twitter-icon {
-  animation: 1s ease-out 0.8s 1 slideInFromBottom;
+.linkedin-appear {
+  transform: scale(0);
 }
 
-@keyframes slideInFromBottom {
-  0% {
-    transform: translateY(200%);
-  }
-  100% {
-    transform: translateY(0);
-  }
+.linkedin-appear.linkedin-appear-active {
+  transform: scale(1);
+  transition: transform 1s ease-out;
+  /* transition-delay: 400ms; */
 }
 
+.medium-appear {
+  transform: scale(0);
+}
+
+.medium-appear.medium-appear-active {
+  transform: scale(1);
+  transition: transform 1s ease-out;
+  transition-delay: 200ms;
+}
+
+.twitter-appear {
+  transform: scale(0);
+}
+
+.twitter-appear.twitter-appear-active {
+  transform: scale(1);
+  transition: transform 1s ease-out;
+  transition-delay: 400ms;
+}
+
+/* pdf viewer styles */
 
 div.react-pdf__Page__annotations.annotationLayer {
   display: none;
@@ -172,4 +195,96 @@ div.react-pdf__Page__annotations.annotationLayer {
 
 canvas.react-pdf__Page__canvas {
   display: inline !important;
+}
+
+/* media styles */
+
+@media (max-width: 599px) {
+  .App {
+    min-height: 95vh;
+  }
+
+  .about > p {
+    font-size: 1.2em;
+  }
+
+  p.header {
+    line-height: 90%
+  }
+
+  .project-title > button {
+    font-size: 1em;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 900px) {
+  .App {
+    min-height: 95vh;
+  }
+
+  .about > p {
+    font-size: 2em;
+  }
+
+  p.header {
+    line-height: 90%
+  }
+
+  .project-title > button {
+    font-size: 1.2em;
+  }
+}
+
+/* projects */
+
+.projects {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  width: 100%;
+}
+
+.project-titles {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.project-details {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-left: 0;
+  border-top: 1px solid rgb(96,144,114);
+  border-bottom: 1px solid rgb(96,144,114);
+  border-right: 1px solid rgb(96,144,114);
+  width: 100%;
+  transform: translateX(-5%);
+  z-index: 0;
+}
+
+.project-title > button {
+  color: rgb(96,144,114);
+  background-color: rgb(255,254,200);
+  font-weight: 200;
+  font-size: 2.4em;
+  line-height: 100%;
+  font-family: 'Montserrat', sans-serif;
+  border: none;
+  border-right: 1px solid rgb(96,144,114);
+  padding: 0;
+  cursor: pointer;
+  width: 80%;
+  height: 100px;
+  transform: translateX(1px);
+}
+
+.project-title > button.selected {
+  color: rgb(188,75,45);
+  background-color: rgb(255,254,200);
+  border-left: 1px solid rgb(96,144,114);
+  border-top: 1px solid rgb(96,144,114);
+  border-bottom: 1px solid rgb(96,144,114);
+  border-right: 0;
 }
