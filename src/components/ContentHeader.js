@@ -2,24 +2,33 @@ import React from 'react';
 
 const ContentHeader = props => (
   <div className="content-header">
-    <span
-      onClick={() => { props.setContent('about'); }}
-      className={props.activeContent === 'about' ? 'active' : null}
+    <button
+      onClick={(e) => {
+        e.target.blur();
+        props.setContent('about');
+      }}
+      className={props.selectedContent === 'about' ? 'selected' : null}
     >
-      ABOUT&nbsp;&nbsp;
-    </span>
-    <span
-      onClick={() => { props.setContent('projects'); }}
-      className={props.activeContent === 'projects' ? 'active' : null}
+      ABOUT
+    </button>
+    <button
+      onClick={(e) => {
+        e.target.blur();
+        props.setContent('projects');
+      }}
+      className={props.selectedContent === 'projects' ? 'selected' : null}
     >
-      PROJECTS&nbsp;&nbsp;
-    </span>
-    <span
-      onClick={() => { props.setContent('cv'); }}
-      className={props.activeContent === 'cv' ? 'active' : null}
+      PROJECTS
+    </button>
+    <button
+      onClick={(e) => {
+        e.target.blur();
+        props.setContent('cv');
+      }}
+      className={props.selectedContent === 'cv' ? 'selected' : null}
     >
       CV
-    </span>
+    </button>
   </div>
 );
 

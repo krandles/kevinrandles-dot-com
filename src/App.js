@@ -36,7 +36,7 @@ class App extends Component {
       <div className="App">
         <div>
           <PageHeader />
-          <ContentHeader activeContent={this.state.mainContent} setContent={this.setContent} />
+          <ContentHeader selectedContent={this.state.mainContent} setContent={this.setContent} />
           {this.switchContent()}
         </div>
         <ContactIcons />
