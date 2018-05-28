@@ -8,7 +8,8 @@ const projects = {
     hostedLinkText: 'tapped.kevinrandles.com',
     description: 'A multi-purpose app for craft beer enthusiasts, Tapped combines beer and brewery listings and reviews with event listings for craft beer-related events (bottle shares, beer releases). Users can create and manage public or private events, discuss and post photos of events, and contribute to beer reviews/listings.',
     tech: ['React', 'Redux', 'React Router', 'Semantic UI', 'Rails', 'PostgreSQL'],
-    date: 'March 2018 (ongoing)'
+    date: 'March 2018 (ongoing)',
+    images: ['images/tapped1.png']
   },
   tileMatcher: {
     githubLink: 'https://github.com/krandles/Tile-Matcher-Frontendd',
@@ -16,7 +17,8 @@ const projects = {
     hostedLinkText: 'tile-matcher.kevinrandles.com',
     description: 'A Concentration-style tile-matching game built with vanilla JavaScript, with support for multiple tilesets loaded from a Rails API.',
     tech: ['JavaScript', 'Rails', 'HTML', 'CSS'],
-    date: 'February 2018'
+    date: 'February 2018',
+    images: ['images/tile-matcher1.png']
   },
   getErDone: {
     githubLink: 'https://github.com/krandles/get-er-done',
@@ -24,7 +26,8 @@ const projects = {
     hostedLinkText: 'get-er-done.kevinrandles.com',
     description: "A todo-list app incorporating gamification elements, Get 'Er Done allows users to manage tasks by project or category, earning experience points towards levelling up when tasks or projects are completed.",
     tech: ['Ruby', 'Rails', 'Bootstrap'],
-    date: 'February 2018'
+    date: 'February 2018',
+    images: ['http://via.placeholder.com/350x200']
   },
   mediocreReads: {
     githubLink: 'https://github.com/krandles/mediocre-reads-cli',
@@ -32,7 +35,8 @@ const projects = {
     hostedLinkText: '',
     description: "A Ruby CLI app that interfaces with the Goodreads API, giving users the ability to search authors and books, and list books they've reviewed",
     tech: ['Ruby', 'Nokogiri', 'Sinatra', 'SQLite'],
-    date: 'January 2018'
+    date: 'January 2018',
+    images: ['http://via.placeholder.com/350x200']
   }
 };
 

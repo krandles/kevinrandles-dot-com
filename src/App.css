@@ -112,7 +112,7 @@ button:active:focus {
   grid-row-start: 2;
   grid-row-end: 3;
   margin: 5px auto;
-  padding-top: 20px;
+  padding-top: 10px;
   width: 60%;
   /* height: 5vh; */
 }
@@ -293,7 +293,7 @@ canvas.react-pdf__Page__canvas {
   display: flex;
   flex-direction: column;
   align-content: center;
-  justify-content: center;
+  justify-content: space-between;
 }
 
 .project-details-component p {
@@ -317,21 +317,31 @@ canvas.react-pdf__Page__canvas {
   max-width: 80%;
   margin-top: 20px;
   margin-bottom: 0px;
-  transform: translateX(40px);
+  /* transform: translateX(40px); */
   text-align: left;
   font-family: 'Montserrat', sans-serif;
   color: rgb(96,144,114);
 }
 
 .project-details-component ul {
+  padding: 0;
   margin: 5px 10px;
   text-align: left;
   font-family: 'Montserrat', sans-serif;
   color: rgb(96,144,114);
 }
 
-/* .project-details-component li {
-  text-align: left;
-  font-family: 'Montserrat', sans-serif;
-  color: rgb(96,144,114);
-} */
+.project-top {
+  flex: 1;
+}
+
+.project-bottom {
+  flex: 1;
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.project-image img {
+  height: 200px;
+}
