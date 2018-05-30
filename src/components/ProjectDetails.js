@@ -8,13 +8,13 @@ const ProjectDetails = (props) => {
         <h3>{project.date}</h3>
         <p>{project.description}</p>
         <div className="project-links">
-          {project.hostedLink ? <span><a href={project.hostedLink}>{project.hostedLinkText}</a> - </span> : null }
-          <span><a href={project.githubLink}>GitHub Repo</a></span>
+          {project.hostedLink ? <span><a href={project.hostedLink}>Visit Site</a> - </span> : null }
+          <span><a href={project.githubLink}>GitHub Repository</a></span>
         </div>
       </div>
       <div className="project-bottom">
         <div className="project-tools">
-          <h4>Tech/Tools:</h4>
+          <h4>Built With:</h4>
           <ul>
             {project.tech.map(t => <li key={t}>{t}</li>)}
           </ul>

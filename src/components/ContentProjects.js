@@ -33,7 +33,7 @@ const projects = {
     githubLink: 'https://github.com/krandles/mediocre-reads-cli',
     hostedLink: '',
     hostedLinkText: '',
-    description: "A Ruby CLI app that interfaces with the Goodreads API, giving users the ability to search authors and books, and list books they've reviewed",
+    description: "A Ruby CLI app that interfaces with the Goodreads API, giving users the ability to search authors and books, and list books they've reviewed.",
     tech: ['Ruby', 'Nokogiri', 'Sinatra', 'SQLite'],
     date: 'January 2018',
     images: []

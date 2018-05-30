@@ -60,7 +60,7 @@ h2 {
 .about h2 {
   margin-top: 20px;
   font-size: 2.5rem;
-  font-weight: 400;
+  font-weight: 300;
   font-family: 'Montserrat', sans-serif;
   /* border-bottom: 1px solid; */
   color: rgb(96,144,114);
@@ -70,8 +70,9 @@ h2 {
   /* display: inline-block; */
   font-family: 'Montserrat', sans-serif;
   font-size: 1.2rem;
-  font-weight: 400;
+  font-weight: 300;
   margin: 10px auto;
+  text-align: justify;
   /* max-width: 80%; */
 }
 
@@ -213,11 +214,13 @@ button:active:focus {
 }
 
 .resume a {
-  font-family: 'Fira Sans', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   color: rgb(188,75,45);
 }
 
-
+.resume p {
+  font-family: 'Montserrat', sans-serif;
+}
 
 /* projects */
 
@@ -284,11 +287,13 @@ button:active:focus {
 
 .project-top {
   flex: 1;
+  margin-top: 10px;
 }
 
 .project-bottom {
   flex: 1;
   margin-top: 10px;
+  margin-bottom: 10px;
   display: flex;
   justify-content: space-around;
 }
@@ -296,6 +301,9 @@ button:active:focus {
 .project-details-component p {
   margin: 5px auto;
   max-width: 80%;
+  font-weight: 400;
+  text-align: justify;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 400;
 }
 
@@ -329,9 +337,9 @@ button:active:focus {
   color: rgb(96,144,114);
 }
 
-.project-details-component li {
+/* .project-details-component li {
   font-family: "Fira Sans";
-}
+} */
 
 .project-image img {
   height: 180px;
@@ -445,7 +453,7 @@ button:active:focus {
 
 @media (min-width: 600px) and (max-width: 900px) {
   .App {
-    min-height: 95vh;
+    min-height: 93vh;
   }
 
   .about > p {
@@ -456,7 +464,11 @@ button:active:focus {
     line-height: 90%
   }
 
+  .project-details-component h4 {
+    max-width: 100%;
+  }
+
   .project-title > button {
-    font-size: 1.2em;
+    font-size: 2em;
   }
 }
