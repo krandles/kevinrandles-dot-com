@@ -32,5 +32,4 @@ const ContentHeader = props => (
   </div>
 );
 
-
 export default ContentHeader;

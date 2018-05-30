@@ -6,7 +6,7 @@ const projects = {
     githubLink: 'https://github.com/krandles/bottle-share-frontend',
     hostedLink: 'http://tapped.kevinrandles.com',
     hostedLinkText: 'tapped.kevinrandles.com',
-    description: 'A multi-purpose app for craft beer enthusiasts, Tapped combines beer and brewery listings and reviews with event listings for craft beer-related events (bottle shares, beer releases). Users can create and manage public or private events, discuss and post photos of events, and contribute to beer reviews/listings.',
+    description: 'A multi-purpose app for craft beer enthusiasts, Tapped features beer/brewery listings and reviews and event listings for craft beer-related events. Users can create and manage public or private events, discuss and post photos of events, and contribute to beer reviews/listings.',
     tech: ['React', 'Redux', 'React Router', 'Semantic UI', 'Rails', 'PostgreSQL'],
     date: 'March 2018 (ongoing)',
     images: ['images/tapped1.png']
@@ -27,7 +27,7 @@ const projects = {
     description: "A todo-list app incorporating gamification elements, Get 'Er Done allows users to manage tasks by project or category, earning experience points towards levelling up when tasks or projects are completed.",
     tech: ['Ruby', 'Rails', 'Bootstrap'],
     date: 'February 2018',
-    images: ['http://via.placeholder.com/350x200']
+    images: ['images/geterdone1.png']
   },
   mediocreReads: {
     githubLink: 'https://github.com/krandles/mediocre-reads-cli',
@@ -36,7 +36,7 @@ const projects = {
     description: "A Ruby CLI app that interfaces with the Goodreads API, giving users the ability to search authors and books, and list books they've reviewed",
     tech: ['Ruby', 'Nokogiri', 'Sinatra', 'SQLite'],
     date: 'January 2018',
-    images: ['http://via.placeholder.com/350x200']
+    images: []
   }
 };
 

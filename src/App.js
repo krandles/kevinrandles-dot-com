@@ -9,7 +9,7 @@ import './App.css';
 
 class App extends Component {
   state = {
-    mainContent: 'projects',
+    mainContent: 'about',
     selectedProject: 'tapped'
   }
 

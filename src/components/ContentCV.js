@@ -1,10 +1,11 @@
 import React from 'react';
-import PDFDocument from './PDFDocument';
-// import { Document } from 'react-pdf/dist/entry.webpack';
 
 const ContentCV = () => (
-  <div>
-    <PDFDocument />
+  <div className="main-content">
+    <div className="resume">
+      <p>Coming Soon</p>
+      <p>In the meantime, <a href="/Kevin Randles Resume 2018.pdf">download</a> my resume.</p>
+    </div>
   </div>
 );
 

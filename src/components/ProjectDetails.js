@@ -19,9 +19,13 @@ const ProjectDetails = (props) => {
             {project.tech.map(t => <li key={t}>{t}</li>)}
           </ul>
         </div>
-        <div className="project-image">
-          <img src={project.images[0]} alt="" />
-        </div>
+        {project.images.length ?
+          <div className="project-image">
+            <img src={project.images[0]} alt="" />
+          </div>
+          :
+          null
+        }
       </div>
     </div>
   );
