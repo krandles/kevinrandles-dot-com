@@ -274,7 +274,6 @@ button:active:focus {
   border-right: 1px solid rgb(96,144,114);
   width: 100%;
   transform: translateX(-5%);
-  z-index: 0;
 }
 
 .project-details-component {
@@ -320,10 +319,8 @@ button:active:focus {
 }
 
 .project-details-component h4 {
-  max-width: 80%;
   margin-top: 10px;
   margin-bottom: 0px;
-  /* transform: translateX(40px); */
   text-align: left;
   font-family: 'Montserrat', sans-serif;
   color: rgb(96,144,114);
@@ -336,10 +333,6 @@ button:active:focus {
   font-family: 'Montserrat', sans-serif;
   color: rgb(96,144,114);
 }
-
-/* .project-details-component li {
-  font-family: "Fira Sans";
-} */
 
 .project-image img {
   height: 180px;
@@ -438,7 +431,6 @@ button:active:focus {
   .project-tools h4 {
     text-align: center;
     margin: 0;
-    transform: translateX(40px);
   }
 
   .project-tools ul {
