@@ -274,10 +274,6 @@ button:active:focus {
   z-index: 0;
 }
 
-div.project-details {
-  margin-top: 0;
-}
-
 .project-details-component {
   display: flex;
   flex-direction: column;
@@ -355,6 +351,10 @@ div.project-details {
 
   p.header {
     line-height: 90%
+  }
+
+  div.project-details {
+    margin-top: 0;
   }
 
   .projects {
