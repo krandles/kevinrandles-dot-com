@@ -15,13 +15,13 @@ dark yellow #b29638
 red-orange #b15829
 */
 
-body {
+/* body {
   --background-color: rgb(255,254,200);
   --text-color: rgb(96,144,114);
   --link-color: rgb(188,75,45);
   --accent-color: rgb(75,12,11);
   --shadow-color: rgba(96,144,114,0.6);
-}
+} */
 
 html {
   background-color: var(--background-color);
@@ -132,8 +132,26 @@ button:active:focus {
   box-shadow: none;
 }
 
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.theme-icon {
+  padding-top: 15px;
+  height: auto;
+  /* transform: translate(-10px, 10px); */
+  /* transform: translateY(20px); */
+}
+
+.theme-icon svg {
+  fill: var(--text-color);
+  width: 3vw;
+  margin-right: 10px;
+}
+
 .contact-logos-container {
-  background-color: var(--background-color);
   display: flex;
   margin: 5px auto;
   padding-top: 10px;
