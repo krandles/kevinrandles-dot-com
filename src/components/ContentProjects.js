@@ -6,7 +6,7 @@ const projects = {
     githubLink: 'https://github.com/krandles/bottle-share-frontend',
     hostedLink: 'http://tapped.kevinrandles.com',
     hostedLinkText: 'tapped.kevinrandles.com',
-    description: 'A multi-purpose app for craft beer enthusiasts, Tapped features beer/brewery listings and reviews and event listings for craft beer-related events. Users can create and manage public or private events, discuss and post photos of events, and contribute to beer reviews/listings.',
+    description: 'A multi-purpose app for craft beer enthusiasts, Tapped features beer & brewery listings/reviews and craft beer-related event listings. Users can create and manage public or private events, discuss and post photos of events, and contribute to beer reviews/listings.',
     tech: ['React', 'Redux', 'React Router', 'Semantic UI', 'Rails', 'PostgreSQL'],
     date: 'March 2018 (ongoing)',
     images: ['images/tapped1.png']
@@ -44,9 +44,9 @@ const ContentProjects = props => (
   <div className="main-content">
     <div className="projects">
       <div className="project-titles">
-        <div className="project-title">
+        <div className={props.selectedProject === 'tapped' ? 'project-title project-title-selected' : 'project-title'}>
           <button
-            className={props.selectedProject === 'tapped' ? 'selected' : null}
+            className={props.selectedProject === 'tapped' ? 'project-button selected-project' : 'project-button'}
             onClick={(e) => {
               e.target.blur();
               props.setProject('tapped');
@@ -55,9 +55,9 @@ const ContentProjects = props => (
             TAPPED
           </button>
         </div>
-        <div className="project-title">
+        <div className={props.selectedProject === 'tileMatcher' ? 'project-title project-title-selected' : 'project-title'}>
           <button
-            className={props.selectedProject === 'tileMatcher' ? 'selected' : null}
+            className={props.selectedProject === 'tileMatcher' ? 'project-button selected-project' : 'project-button'}
             onClick={(e) => {
               e.target.blur();
               props.setProject('tileMatcher');
@@ -66,9 +66,9 @@ const ContentProjects = props => (
             TILE MATCHER
           </button>
         </div>
-        <div className="project-title">
+        <div className={props.selectedProject === 'getErDone' ? 'project-title project-title-selected' : 'project-title'}>
           <button
-            className={props.selectedProject === 'getErDone' ? 'selected' : null}
+            className={props.selectedProject === 'getErDone' ? 'project-button selected-project' : 'project-button'}
             onClick={(e) => {
               e.target.blur();
               props.setProject('getErDone');
@@ -77,9 +77,9 @@ const ContentProjects = props => (
             GET &#39;ER DONE
           </button>
         </div>
-        <div className="project-title">
+        <div className={props.selectedProject === 'mediocreReads' ? 'project-title project-title-selected' : 'project-title'}>
           <button
-            className={props.selectedProject === 'mediocreReads' ? 'selected' : null}
+            className={props.selectedProject === 'mediocreReads' ? 'project-button selected-project-last' : 'project-button'}
             onClick={(e) => {
               e.target.blur();
               props.setProject('mediocreReads');

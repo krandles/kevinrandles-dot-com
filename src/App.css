@@ -254,13 +254,57 @@ button:active:focus {
   transform: translateX(1px);
 }
 
-.project-title > button.selected {
+button.selected-project {
   color: rgb(188,75,45);
   background-color: rgb(255,254,200);
   border-left: 1px solid rgb(96,144,114);
   border-top: 1px solid rgb(96,144,114);
   border-bottom: 1px solid rgb(96,144,114);
   border-right: 0;
+  box-shadow: 2px 4px 2px -2px rgba(96,144,114,0.6);
+}
+
+button.selected-project-last {
+  color: rgb(188,75,45);
+  background-color: rgb(255,254,200);
+  border-left: 1px solid rgb(96,144,114);
+  border-top: 1px solid rgb(96,144,114);
+  border-bottom: 1px solid rgb(96,144,114);
+  border-right: 0;
+  box-shadow: 2px 2px 2px rgba(96,144,114,0.6);
+}
+
+.project-title {
+  position: relative;
+  z-index: 1;
+}
+
+.project-title-selected {
+  z-index: 2;
+}
+
+.project-title > button.project-button:after {
+  display: block;
+  background-color: rgb(255,254,200);
+  width: 3px;
+  height: 100px;
+  content: " ";
+  position: absolute;
+  top: -2px;
+  right: -4px;
+  z-index: 3;
+}
+
+.project-title > button.selected-project:after, .project-title > button.selected-project-last:after {
+  display: block;
+  background-color: rgb(255,254,200);
+  width: 20px;
+  height: 98px;
+  content: " ";
+  position: absolute;
+  top: 0;
+  right: -10px;
+  z-index: 1;
 }
 
 .project-details {
@@ -274,6 +318,9 @@ button:active:focus {
   border-right: 1px solid rgb(96,144,114);
   width: 100%;
   transform: translateX(-5%);
+  box-shadow: 2px 2px 2px rgba(96,144,114,0.6);
+  position: relative;
+  z-index: 3;
 }
 
 .project-details-component {
@@ -286,7 +333,9 @@ button:active:focus {
 
 .project-top {
   flex: 1;
-  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .project-bottom {
@@ -295,6 +344,12 @@ button:active:focus {
   margin-bottom: 10px;
   display: flex;
   justify-content: space-around;
+}
+
+.project-tools, .project-image {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .project-details-component p {
@@ -356,6 +411,7 @@ button:active:focus {
 
   div.project-details {
     margin-top: 0;
+    box-shadow: none;
   }
 
   .projects {
@@ -391,11 +447,16 @@ button:active:focus {
     border: none;
     height: auto;
     width: auto;
+    box-shadow: none;
   }
 
   .project-title > button.selected {
     font-size: 2em;
     border: none;
+  }
+
+  .project-title > button.selected-project:after, .project-title > button.selected-project-last:after {
+    display: none;
   }
 
   .project-details-component {
@@ -435,6 +496,10 @@ button:active:focus {
 
   .project-tools ul {
     text-align: center;
+  }
+
+  .project-tools, .project-image {
+    align-items: center;
   }
 
   .project-details img {
