@@ -8,9 +8,22 @@ import ContentCV from './components/ContentCV';
 import './App.css';
 
 class App extends Component {
-  state = {
-    mainContent: 'about',
-    selectedProject: 'tapped'
+  constructor(props) {
+    super(props);
+    this.state = {
+      mainContent: 'about',
+      selectedProject: 'tapped',
+      customBackgroundColor: '#000'
+    };
+    this.appRef = React.createRef();
+  }
+
+  componentDidMount() {
+    document.body.style.setProperty('--background-color', this.state.customBackgroundColor);
+    // if (this.appRef) {
+    //   console.log(this.appRef);
+    //   this.appRef.node.style.setProperty('--background-color', this.state.customBackgroundColor);
+    // }
   }
 
   setContent = (content) => {
@@ -39,8 +52,14 @@ class App extends Component {
   }
 
   render() {
+    // const styles = {
+    //   appStyle: {
+    //     '--background-color': 'black'
+    //   }
+    // };
+
     return (
-      <div className="App">
+      <div className="App" ref={this.appRef}>
         <div>
           <PageHeader />
           <ContentHeader selectedContent={this.state.mainContent} setContent={this.setContent} />

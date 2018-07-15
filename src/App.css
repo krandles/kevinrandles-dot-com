@@ -14,15 +14,23 @@ medium yellow #c6b968
 dark yellow #b29638
 red-orange #b15829
 */
+
+body {
+  --background-color: rgb(255,254,200);
+  --text-color: rgb(96,144,114);
+  --link-color: rgb(188,75,45);
+  --accent-color: rgb(75,12,11);
+  --shadow-color: rgba(96,144,114,0.6);
+}
+
 html {
-  background-color: rgb(255,254,200);
+  background-color: var(--background-color);
   width: 100%;
   min-height: 100%;
 }
 
 p {
-  color: rgb(96,144,114);
-  /* color: #4066b5; */
+  color: var(--text-color);
   font-family: 'Fira Sans', sans-serif;
   font-weight: 400;
 }
@@ -34,9 +42,7 @@ h2 {
 
 .App {
   align-content: center;
-  background-color: rgb(255,254,200);
-  /* display: grid;
-  grid-template-rows: 1fr auto; */
+  background-color: var(--background-color);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -66,7 +72,7 @@ h2 {
   font-weight: 300;
   font-family: 'Montserrat', sans-serif;
   /* border-bottom: 1px solid; */
-  color: rgb(96,144,114);
+  color: var(--text-color);
 }
 
 .about > p {
@@ -80,7 +86,7 @@ h2 {
 }
 
 .about a {
-  color: rgb(188,75,45);
+  color: var(--link-color);
   text-decoration: none;
 }
 
@@ -89,7 +95,7 @@ h2 {
 }
 
 p.header {
-  color: rgb(96,144,114);
+  color: var(--text-color);
   font-weight: 200;
   font-size: 14vw;
   line-height: 85%;
@@ -104,8 +110,8 @@ p.header {
 }
 
 .content-header button {
-  color: rgb(96,144,114);
-  background-color: rgb(255,254,200);
+  color: var(--text-color);
+  background-color: var(--background-color);
   font-weight: 200;
   font-size: 9.8vw;
   line-height: 85%;
@@ -116,7 +122,7 @@ p.header {
 }
 
 .content-header button.selected {
-  color: rgb(75,12,11);
+  color: var(--accent-color);
 }
 
 button:active:focus {
@@ -127,14 +133,11 @@ button:active:focus {
 }
 
 .contact-logos-container {
-  background-color: rgb(255,254,200);
+  background-color: var(--background-color);
   display: flex;
-  grid-row-start: 2;
-  grid-row-end: 3;
   margin: 5px auto;
   padding-top: 10px;
   width: 60%;
-  /* height: 5vh; */
 }
 
 .contact-logos-container > div {
@@ -145,7 +148,7 @@ button:active:focus {
 }
 
 .contact-logos-container svg {
-  fill: rgb(96,144,114);
+  fill: var(--text-color);
   height: auto;
   transition: fill .8s ease;
   max-width: 50px;
@@ -153,8 +156,7 @@ button:active:focus {
 }
 
 .contact-logos-container svg:hover {
-  fill: rgb(75,12,11);
-  /* transform: scale(1.1); */
+  fill: var(--accent-color);
 }
 
 .github-appear {
@@ -218,7 +220,7 @@ button:active:focus {
 
 .resume a {
   font-family: 'Montserrat', sans-serif;
-  color: rgb(188,75,45);
+  color: var(--link-color);
 }
 
 .resume p {
@@ -242,14 +244,14 @@ button:active:focus {
 }
 
 .project-title > button {
-  color: rgb(96,144,114);
-  background-color: rgb(255,254,200);
+  color: var(--text-color);
+  background-color: var(--background-color);
   font-weight: 200;
   font-size: 2.2rem;
   line-height: 100%;
   font-family: 'Montserrat', sans-serif;
   border: none;
-  border-right: 1px solid rgb(96,144,114);
+  border-right: 1px solid var(--text-color);
   padding: 0;
   cursor: pointer;
   width: 80%;
@@ -258,23 +260,23 @@ button:active:focus {
 }
 
 button.selected-project {
-  color: rgb(188,75,45);
-  background-color: rgb(255,254,200);
-  border-left: 1px solid rgb(96,144,114);
-  border-top: 1px solid rgb(96,144,114);
-  border-bottom: 1px solid rgb(96,144,114);
+  color: var(--link-color);
+  background-color: var(--background-color);
+  border-left: 1px solid var(--text-color);
+  border-top: 1px solid var(--text-color);
+  border-bottom: 1px solid var(--text-color);
   border-right: 0;
-  box-shadow: 2px 4px 2px -2px rgba(96,144,114,0.6);
+  box-shadow: 2px 4px 2px -2px var(--shadow-color);
 }
 
 button.selected-project-last {
-  color: rgb(188,75,45);
-  background-color: rgb(255,254,200);
-  border-left: 1px solid rgb(96,144,114);
-  border-top: 1px solid rgb(96,144,114);
-  border-bottom: 1px solid rgb(96,144,114);
+  color: var(--link-color);
+  background-color: var(--background-color);
+  border-left: 1px solid var(--text-color);
+  border-top: 1px solid var(--text-color);
+  border-bottom: 1px solid var(--text-color);
   border-right: 0;
-  box-shadow: 2px 2px 2px rgba(96,144,114,0.6);
+  box-shadow: 2px 2px 2px var(--shadow-color);
 }
 
 .project-title {
@@ -288,7 +290,7 @@ button.selected-project-last {
 
 .project-title > button.project-button:after {
   display: block;
-  background-color: rgb(255,254,200);
+  background-color: var(--background-color);
   width: 3px;
   height: 100px;
   content: " ";
@@ -300,7 +302,7 @@ button.selected-project-last {
 
 .project-title > button.selected-project:after, .project-title > button.selected-project-last:after {
   display: block;
-  background-color: rgb(255,254,200);
+  background-color: var(--background-color);
   width: 20px;
   height: 98px;
   content: " ";
@@ -316,12 +318,12 @@ button.selected-project-last {
   margin-top: 20px;
   margin-bottom: 20px;
   border-left: 0;
-  border-top: 1px solid rgb(96,144,114);
-  border-bottom: 1px solid rgb(96,144,114);
-  border-right: 1px solid rgb(96,144,114);
+  border-top: 1px solid var(--text-color);
+  border-bottom: 1px solid var(--text-color);
+  border-right: 1px solid var(--text-color);
   width: 100%;
   transform: translateX(-5%);
-  box-shadow: 2px 2px 2px rgba(96,144,114,0.6);
+  box-shadow: 2px 2px 2px var(--shadow-color);
   position: relative;
   z-index: 3;
 }
@@ -366,12 +368,12 @@ button.selected-project-last {
 
 .project-details-component a {
   font-family: 'Montserrat', sans-serif;
-  color: rgb(188,75,45);
+  color: var(--link-color);
 }
 
 .project-details-component h3 {
   font-family: 'Montserrat', sans-serif;
-  color: rgb(96,144,114);
+  color: var(--text-color);
   margin-bottom: 0;
   margin-top: 0;
 }
@@ -381,7 +383,7 @@ button.selected-project-last {
   margin-bottom: 0px;
   text-align: left;
   font-family: 'Montserrat', sans-serif;
-  color: rgb(96,144,114);
+  color: var(--text-color);
 }
 
 .project-details-component ul {
@@ -389,12 +391,12 @@ button.selected-project-last {
   margin: 5px 10px;
   text-align: left;
   font-family: 'Montserrat', sans-serif;
-  color: rgb(96,144,114);
+  color: var(--text-color);
 }
 
 .project-image img {
   height: 180px;
-  border: 1px solid rgb(75,12,11);
+  border: 1px solid var(--accent-color);
 }
 
 /* media styles */
