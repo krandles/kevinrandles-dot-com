@@ -132,6 +132,11 @@ button:active:focus {
   align-items: center;
 }
 
+.placeholder {
+  width: 3vw;
+  padding-left: 10px;
+}
+
 .theme-icon {
   padding-top: 15px;
   height: auto;
@@ -226,7 +231,6 @@ button:active:focus {
   display: flex;
   flex-direction: column;
   margin: auto;
-  /* align-content: center; */
   max-width: 80%;
 }
 
@@ -408,7 +412,8 @@ button.selected-project-last {
 
 .project-image img {
   height: 180px;
-  border: 1px solid var(--accent-color);
+  box-shadow: 0 0 2px 2px var(--shadow-color);
+  /* border: 1px solid var(--text-color); */
 }
 
 /* media styles */
