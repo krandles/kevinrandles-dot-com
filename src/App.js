@@ -47,11 +47,10 @@ class App extends Component {
   }
 
   setTheme = () => {
-    Object.keys(this.state.themes[this.state.currentTheme]).forEach((key) => {
+    const theme = this.state.themes[this.state.currentTheme];
+    Object.keys(theme).forEach((key) => {
       const cssKey = `--${key}`;
-      const cssValue = this.state.themes[this.state.currentTheme][key];
-      console.log(this.state.currentTheme);
-      // document.body.style.removeProperty(cssKey);
+      const cssValue = theme[key];
       document.body.style.setProperty(cssKey, cssValue);
     });
   }
