@@ -16,6 +16,7 @@ class App extends Component {
   };
 
   componentDidMount() {
+    this.chooseRandomTheme();
     this.setTheme();
   }
 
@@ -44,6 +45,12 @@ class App extends Component {
       const cssValue = theme[key];
       document.body.style.setProperty(cssKey, cssValue);
     });
+  }
+
+  chooseRandomTheme = () => {
+    const themeNames = Object.keys(themes);
+    const randomThemeNumber = Math.floor(Math.random() * themeNames.length);
+    this.setState({ currentTheme: themeNames[randomThemeNumber] });
   }
 
   switchContent = () => {
