@@ -1,5 +1,7 @@
-const projects = {
-  tapped: {
+const projects = [
+  {
+    name: 'tapped',
+    displayName: 'TAPPED',
     githubLink: 'https://github.com/krandles/bottle-share-frontend',
     hostedLink: 'http://tapped.kevinrandles.com',
     hostedLinkText: 'tapped.kevinrandles.com',
@@ -8,7 +10,9 @@ const projects = {
     date: 'March 2018 (ongoing)',
     images: ['images/tapped1.png']
   },
-  tileMatcher: {
+  {
+    name: 'tileMatcher',
+    displayName: 'TILE MATCHER',
     githubLink: 'https://github.com/krandles/Tile-Matcher-Frontendd',
     hostedLink: 'http://tile-matcher.kevinrandles.com',
     hostedLinkText: 'tile-matcher.kevinrandles.com',
@@ -17,7 +21,9 @@ const projects = {
     date: 'February 2018',
     images: ['images/tile-matcher1.png']
   },
-  getErDone: {
+  {
+    name: 'getErDone',
+    displayName: "GET 'ER DONE",
     githubLink: 'https://github.com/krandles/get-er-done',
     hostedLink: 'http://geterdone.kevinrandles.com',
     hostedLinkText: 'get-er-done.kevinrandles.com',
@@ -26,7 +32,9 @@ const projects = {
     date: 'February 2018',
     images: ['images/geterdone1.png']
   },
-  mediocreReads: {
+  {
+    name: 'mediocreReads',
+    displayName: 'MEDIOCRE READS',
     githubLink: 'https://github.com/krandles/mediocre-reads-cli',
     hostedLink: '',
     hostedLinkText: '',
@@ -35,6 +43,6 @@ const projects = {
     date: 'January 2018',
     images: []
   }
-};
+];
 
 export default projects;

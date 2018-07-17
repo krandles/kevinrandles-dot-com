@@ -133,7 +133,7 @@ button:active:focus {
 }
 
 .placeholder {
-  width: 3vw;
+  width: 5vw;
   padding-left: 10px;
 }
 
@@ -146,7 +146,7 @@ button:active:focus {
 
 .theme-icon svg {
   fill: var(--text-color);
-  width: 3vw;
+  width: 5vw;
   margin-right: 10px;
 }
 
@@ -285,13 +285,7 @@ button.selected-project {
   box-shadow: 2px 4px 2px -2px var(--shadow-color);
 }
 
-button.selected-project-last {
-  color: var(--link-color);
-  background-color: var(--background-color);
-  border-left: 1px solid var(--text-color);
-  border-top: 1px solid var(--text-color);
-  border-bottom: 1px solid var(--text-color);
-  border-right: 0;
+div.project-titles div:last-child > button.selected-project {
   box-shadow: 2px 2px 2px var(--shadow-color);
 }
 
