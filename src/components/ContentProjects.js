@@ -9,6 +9,7 @@ const ContentProjects = props => (
       <div className="project-titles">
         {projects.map(project => (
           <ProjectButton
+            key={project.name}
             project={project}
             selectedProject={props.selectedProject}
             setProject={props.setProject}

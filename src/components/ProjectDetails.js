@@ -1,4 +1,5 @@
 import React from 'react';
+import ProjectCarousel from './ProjectCarousel';
 
 const ProjectDetails = (props) => {
   const { project } = props;
@@ -20,9 +21,7 @@ const ProjectDetails = (props) => {
           </ul>
         </div>
         {project.images.length ?
-          <div className="project-image">
-            <img src={project.images[0]} alt="" />
-          </div>
+          <ProjectCarousel images={project.images} />
           :
           null
         }
