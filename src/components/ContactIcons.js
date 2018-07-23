@@ -6,7 +6,7 @@ const ContactIcons = () => (
     <CSSTransitionGroup
       component="div"
       transitionName="github"
-      transitionAppear={true}
+      transitionAppear
       transitionAppearTimeout={1400}
       transitionEnter={false}
       transitionLeave={false}
@@ -18,7 +18,7 @@ const ContactIcons = () => (
     <CSSTransitionGroup
       component="div"
       transitionName="gmail"
-      transitionAppear={true}
+      transitionAppear
       transitionAppearTimeout={1200}
       transitionEnter={false}
       transitionLeave={false}
@@ -30,7 +30,7 @@ const ContactIcons = () => (
     <CSSTransitionGroup
       component="div"
       transitionName="linkedin"
-      transitionAppear={true}
+      transitionAppear
       transitionAppearTimeout={1000}
       transitionEnter={false}
       transitionLeave={false}
@@ -42,7 +42,7 @@ const ContactIcons = () => (
     <CSSTransitionGroup
       component="div"
       transitionName="medium"
-      transitionAppear={true}
+      transitionAppear
       transitionAppearTimeout={1200}
       transitionEnter={false}
       transitionLeave={false}
@@ -54,7 +54,7 @@ const ContactIcons = () => (
     <CSSTransitionGroup
       component="div"
       transitionName="twitter"
-      transitionAppear={true}
+      transitionAppear
       transitionAppearTimeout={1400}
       transitionEnter={false}
       transitionLeave={false}
