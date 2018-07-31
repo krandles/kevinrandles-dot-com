@@ -427,11 +427,11 @@ div.project-titles div:last-child > button.selected-project {
 .project-image {
   display: flex !important;
   justify-content: center;
-  align-content: center;
+  align-items: center;
 }
 
 .project-image img {
-  width: 100%;
+  width: 95%;
 }
 
 button.slick-arrow.slick-prev::before {
