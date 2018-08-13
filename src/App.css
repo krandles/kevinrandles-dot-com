@@ -476,6 +476,12 @@ button.slick-arrow.slick-prev.slick-disabled::before {
     grid-template-rows: 50px 2fr;
     width: 100%;
   }
+
+  /* .project-titles-wrapper {
+    overflow: hidden;
+    height: 32px;
+
+  } */
   
   .project-titles {
     display: flex;
@@ -487,8 +493,13 @@ button.slick-arrow.slick-prev.slick-disabled::before {
     margin-top: 0;
     margin-bottom: 0;
     overflow-x: scroll;
-    height: auto;
-    text-overflow: fade(20%);
+    overflow-y: hidden;
+    height: 32px;
+    /* text-overflow: fade(20%); */
+  }
+
+  .project-titles::-webkit-scrollbar {
+    display: none;
   }
 
   .project-title {
